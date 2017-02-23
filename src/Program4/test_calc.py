@@ -49,8 +49,10 @@ class TestCal(TestCase):
         calc = Calc()
 
         for function in calc.sum, calc.sub:
-            assert_that(calling(function).with_args("a", 2), raises(TypeError, "a is not a number"))
-            assert_that(calling(function).with_args(2, "b"), raises(TypeError, "b is not a number"))
+            assert_that(calling(function).with_args("a", 2),
+                        raises(TypeError, "a is not a number"))
+            assert_that(calling(function).with_args(2, "b"),
+                        raises(TypeError, "b is not a number"))
 
     def test_with_no_parameters(self):
         calc = Calc()
