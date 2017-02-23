@@ -19,7 +19,7 @@ class TestCal(TestCase):
     def test_result(self):
         calc = Calc()
         result = calc.sum(1, 2)
-        assert_that(result, is_(3), is_(result))
+        assert_that(calc.result(), is_(3), is_(result))
 
     def test_operation(self):
         calc = Calc()
