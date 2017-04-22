@@ -3,10 +3,8 @@ sudo: false
 python:
   - 2.6
   - 2.7
-  - 3.3
-  - 3.4
-  - 3.5
 install:
   - pip install PyHamcrest
 script:
-  - nosetests src/Program1/test_calc.py src/Program2/test_calc.py src/Program3/test_calc.py src/Program4/test_calc.py
+  - cd src/Program4
+  - nosetests test_calc.py
